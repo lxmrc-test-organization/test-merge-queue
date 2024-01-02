@@ -1,13 +1,13 @@
 name: 'Check commit message format'
 on:
+  pull_request:
   merge_group:
-    branches:
-      - main
 
 jobs:
   check-commit-message:
     name: Check commit message format
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'merge_group' }}
     steps:
       - name: Check for commit type
         uses: gsactions/commit-message-checker@v2
