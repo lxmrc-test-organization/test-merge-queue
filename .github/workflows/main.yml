@@ -1,0 +1,15 @@
+name: 'Check commit message format'
+on:
+  merge_group:
+    branches: [ main ]
+
+jobs:
+  check-commit-message:
+    name: Check commit message format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for commit type
+        uses: gsactions/commit-message-checker@v2
+        with:
+          pattern: '(fix|feat|chore|refactor)[:](.+)'
+          error: 'Commit message should look like: <category>: <description>, where category is one of: fix, feat, chore, refactor.'
