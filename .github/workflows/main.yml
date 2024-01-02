@@ -1,6 +1,8 @@
+name: 'Check commit message format'
 on:
-  pull_request:
   merge_group:
+    branches:
+      - main
 
 jobs:
   check-commit-message:
