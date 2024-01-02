@@ -1,7 +1,6 @@
 name: 'Check commit message format'
 on:
   merge_group:
-    types: [checks_requested]
 
 jobs:
   check-commit-message:
