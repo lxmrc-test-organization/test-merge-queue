@@ -1,5 +1,5 @@
 name: 'Check commit message format'
-on: merge_group
+  on: merge_group
 
 jobs:
   check-commit-message:
